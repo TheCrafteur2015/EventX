@@ -1,6 +1,8 @@
-CREATE DATABASE eventx;
+CREATE DATABASE IF NOT EXISTS eventx;
 
-CREATE TABLE role(
+USE eventx;
+
+CREATE TABLE IF NOT EXISTS role(
    id_role INT,
    role_name VARCHAR(256) NOT NULL,
    created_at DATETIME NOT NULL,
@@ -9,7 +11,7 @@ CREATE TABLE role(
    UNIQUE(role_name)
 );
 
-CREATE TABLE Users(
+CREATE TABLE IF NOT EXISTS users(
    id_user INT,
    mail VARCHAR(256) NOT NULL,
    password VARCHAR(256) NOT NULL,
@@ -23,7 +25,7 @@ CREATE TABLE Users(
    FOREIGN KEY(id_role) REFERENCES role(id_role)
 );
 
-CREATE TABLE profile(
+CREATE TABLE IF NOT EXISTS profile(
    id_profile INT,
    firstname VARCHAR(256) NOT NULL,
    lastname VARCHAR(256) NOT NULL,
@@ -37,7 +39,7 @@ CREATE TABLE profile(
    FOREIGN KEY(id_user) REFERENCES Users(id_user)
 );
 
-CREATE TABLE event(
+CREATE TABLE IF NOT EXISTS event(
    id_event INT,
    event_name VARCHAR(256) NOT NULL,
    event_description TEXT,
@@ -51,7 +53,7 @@ CREATE TABLE event(
    FOREIGN KEY(id_user) REFERENCES Users(id_user)
 );
 
-CREATE TABLE wishlist(
+CREATE TABLE IF NOT EXISTS wishlist(
    id_user INT,
    id_event INT,
    PRIMARY KEY(id_user, id_event),
@@ -59,7 +61,7 @@ CREATE TABLE wishlist(
    FOREIGN KEY(id_event) REFERENCES event(id_event)
 );
 
-CREATE TABLE registration(
+CREATE TABLE IF NOT EXISTS registration(
    id_user INT,
    id_event INT,
    PRIMARY KEY(id_user, id_event),
