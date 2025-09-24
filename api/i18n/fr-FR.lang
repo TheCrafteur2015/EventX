@@ -1,0 +1,6 @@
+html.head.description=Une api REST
+api.sandbox.head.title=Bac à sable ApacheAPI
+api.sandbox.title=Bac à sable ApacheAPI
+api.sandbox.description=Voici la liste des routes disponibles :
+exception.404.status=Page Introuvable
+exception.404.message=La ressource souhaitée est introuvable, a été supprimée ou n'existe pas.

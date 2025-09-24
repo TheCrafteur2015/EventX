@@ -1,0 +1,13 @@
+{
+  "require": {
+    "ext-mysqli": "*",
+    "ext-simplexml": "*",
+    "ext-pgsql": "*",
+    "ext-mbstring": "*",
+    "zircote/swagger-php": "^5.0",
+    "ext-imagick": "*",
+    "ext-gd": "*",
+    "ext-http": "*",
+    "ext-fileinfo": "*"
+  }
+}
