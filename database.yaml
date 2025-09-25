@@ -1,0 +1,11 @@
+# Use root/example as user/password credentials
+
+services:
+
+  db:
+    image: mysql:lts
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: toor
+    port:
+      - "3306:3306"
