@@ -1,11 +1,13 @@
 # Use root/example as user/password credentials
 
 services:
-
+  web:
+    build: api/.
+    ports:
+      - "81:80"
   db:
-    image: mysql:lts
+    # build: .\database\
+    image: mysql
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: toor
-    port:
-      - "3306:3306"
