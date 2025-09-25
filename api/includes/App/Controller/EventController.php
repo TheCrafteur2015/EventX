@@ -20,8 +20,8 @@ class EventController extends Controller {
 	}
 	
 	public function search(string $text): Response {
-//		$this->db->prepare("SELECT * FROM `event` WHERE `event_name` LIKE '%?%' OR
-//                                                      `event_description` LIKE '%?%'");
+//		$this->db->prepare("SELECT * FROM `event` WHERE `event_name` LIKE ? OR
+//                                                      `event_description` LIKE ?");
 //		return $this->json($this->db->execute("ss", [$text, $text]);
 		return $this->json(["Sorry there's no database up here"]);
 	}

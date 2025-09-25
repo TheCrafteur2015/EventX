@@ -54,6 +54,21 @@ abstract class Controller {
 		$this->data[$name] = $value;
 	}
 	
+	public final function uploadFile(string $input_name): Response {
+		if (isset($_FILES[$input_name])) {
+			$file = $_FILES[$input_name];
+			
+			$tempFilePath = $file['tmp_name'];
+			$originalFileName = $file['name'];
+			
+			$newPath = TMP_PATH . $originalFileName;
+			
+			if (move_uploaded_file($tempFilePath, DOCUMENT_ROOT . $newPath))
+				return $this->html($newPath);
+		}
+		return $this->empty();
+	}
+	
 	/**
 	 * @throws Exception
 	 */

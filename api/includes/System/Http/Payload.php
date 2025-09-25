@@ -13,22 +13,22 @@ class Payload {
 	
 	private function init(): void {
 		foreach ($_GET as $key=>$value) {
+			$value = $this->mapValue($value);
 			if (array_key_exists($key, $this->data)) {
 				$this->data[$key]->append($value);
 				continue;
 			}
-			$value = $this->mapValue($value);
 			if ($value !== "")
 				$this->data[$key] = new PayloadData($value, GET);
 		}
 		foreach ($_POST as $key=>$value) {
+			$value = $this->mapValue($value);
 			if (array_key_exists($key, $this->data)) {
 				if ($this->data[$key]->getSource() === GET)
 					$this->data[$key]->setSource(REQUEST);
 				$this->data[$key]->append($value);
 				continue;
 			}
-			$value = $this->mapValue($value);
 			if ($value === "")
 				$value = null;
 			$this->data[$key] = new PayloadData($value, POST);
@@ -79,7 +79,7 @@ class Payload {
 	
 	public function getPostAsArray(): array {
 		$array = array_filter($this->data, function($value) {
-			return $value->getSource() === POST;
+			return $value->getSource() === POST || $value->getSource() === REQUEST;
 		});
 		return json_decode(json_encode($array), true);
 	}
