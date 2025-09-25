@@ -1,7 +1,3 @@
-CREATE DATABASE IF NOT EXISTS eventx;
-
-USE eventx;
-
 CREATE TABLE IF NOT EXISTS role(
    id_role INT,
    role_name VARCHAR(256) NOT NULL,

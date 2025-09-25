@@ -6,8 +6,8 @@ services:
     ports:
       - "81:80"
   db:
-    # build: .\database\
-    image: mysql
+    build: database/.
+    # image: mysql
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: toor
