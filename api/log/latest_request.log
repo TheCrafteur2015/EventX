@@ -1,0 +1,17 @@
+GET /REST/api.php/naughty-list/query/test HTTP/1.1
+Host: 127.0.0.1
+Connection: keep-alive
+Cache-Control: max-age=0
+sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: PHPSESSID=getbpt76crafs1vb1gvj5fjbqm; mediawiki_fr_mwUserID=1; mediawiki_fr_mwUserName=Atlonos; mediawiki_fr_mwToken=ff1067b5906af5d0ef89243b97332451; mediawiki_en_mwUserName=Atlonos; extended_databaseUserName=Atlonos; RememberMe=true; mediawiki_en_mwUserID=1; mediawiki_en_mwToken=ff1067b5906af5d0ef89243b97332451; mediawiki_en_mwmwuser-sessionId=288640b0f3ee13461606; extended_databaseUserID=1; extended_databaseToken=6affd05398fe0eb558ee96ffe82fb2d4; _ga=GA1.1.2038783954.1715279731; _shopify_y=5ead0872-AF57-4204-A433-738595AEDCF6; __kla_id=eyJjaWQiOiJOakUwTlRBelltWXRaak5oWWkwME1EZGtMVGc0WldVdE4ySTBaRFJrWmpRME1HTmgiLCIkcmVmZXJyZXIiOnsidHMiOjE3MTUyODAzNDUsInZhbHVlIjoiIiwiZmlyc3RfcGFnZSI6Imh0dHBzOi8vMTI3LjAuMC4xL3Rlc3QucGhwIn0sIiRsYXN0X3JlZmVycmVyIjp7InRzIjoxNzE1MjgwMzQ1LCJ2YWx1ZSI6IiIsImZpcnN0X3BhZ2UiOiJodHRwczovLzEyNy4wLjAuMS90ZXN0LnBocCJ9fQ==; _ruid=eyJ1dWlkIjoiYmFhMTY5ZDMtNTA5OS00OTI2LWIzYTYtZWJiYTgwMDg3MzhmIn0%3D; _ga_FHKBQRQRL0=GS1.1.1715280345.1.0.1715280454.60.0.0; tk_or=%22%22; tk_lr=%22%22; __stripe_mid=f275e294-9eda-47c2-8483-3b0e8e1df972bc6cbd; _ga_PR21PPJW10=GS1.1.1715279731.1.1.1715284026.60.0.0; vector-2022-nav-p-tb=true; mw_installer_session=bah8rtvlcd63ef9bpcnm3es8hv; extended_database_session=hvgvnqjgmm02eorurl0dtb8kqrvg22f5; mediawiki_fr_mw_session=af10qmg6u8job1voj8lfeqcvu2qtpvvr; mediawiki_en_mw_session=5fgel5gs8cdtekidodlohvhcptbon4sr

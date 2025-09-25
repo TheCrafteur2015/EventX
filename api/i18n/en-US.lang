@@ -1,0 +1,6 @@
+html.head.description=A REST api
+api.sandbox.head.title=ApacheAPI Sandbox
+api.sandbox.title=ApacheAPI Sandbox
+api.sandbox.description=Here is the list of paths available:
+exception.404.status=Page Not Found
+exception.404.message=The desired resource could not be found, was removed or doesn't exist.
