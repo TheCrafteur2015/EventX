@@ -45,6 +45,10 @@ abstract class Response {
 	
 	public abstract function send(): int;
 	
+	public function getValue(): mixed {
+		return $this->value;
+	}
+	
 	/*
 	 {
 		try {

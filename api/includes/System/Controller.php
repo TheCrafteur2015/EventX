@@ -3,6 +3,7 @@
 namespace System;
 
 use BadMethodCallException;
+use DateTime;
 use Exception;
 use JetBrains\PhpStorm\Deprecated;
 use System\Database\DatabaseConnection;
@@ -54,19 +55,19 @@ abstract class Controller {
 		$this->data[$name] = $value;
 	}
 	
-	public final function uploadFile(string $input_name): Response {
+	public final function uploadFile(string $input_name): ?string {
 		if (isset($_FILES[$input_name])) {
 			$file = $_FILES[$input_name];
 			
 			$tempFilePath = $file['tmp_name'];
 			$originalFileName = $file['name'];
 			
-			$newPath = TMP_PATH . $originalFileName;
+			$newPath = IMAGEPATH . DS . date("d-m-Y_H-i-s", time()) . "." . explode(".", $originalFileName)[1];
 			
 			if (move_uploaded_file($tempFilePath, DOCUMENT_ROOT . $newPath))
-				return $this->html($newPath);
+				return $newPath;
 		}
-		return $this->empty();
+		return null;
 	}
 	
 	/**

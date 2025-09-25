@@ -14,9 +14,7 @@ class Constants {
 			'LOGPATH'       =>$root.DIRECTORY_SEPARATOR."log",
 			'DS'            =>DIRECTORY_SEPARATOR,
 			'DOCUMENT_ROOT' =>$_SERVER['DOCUMENT_ROOT'],
-			'IMG_PATH'      =>"/resources/pictures/",
-			'DOC_PATH'      =>"/resources/documents/",
-			'TMP_PATH'      =>"/tmp/",
+			'IMAGEPATH'     =>$root.DIRECTORY_SEPARATOR."www".DIRECTORY_SEPARATOR."images",
 		];
 	}
 	

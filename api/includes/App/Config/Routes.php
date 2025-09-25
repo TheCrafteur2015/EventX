@@ -23,10 +23,11 @@ $routes->get('/user/profile/{id:integer}', 'UserController::getProfile');
 $routes->match([POST, "PUT"], '/user/profile/{id:integer}', 'UserController::setProfile');
 $routes->post('/user/create_event', 'UserController::createEvent');
 
-//$routes->post('/user/register', '');
-//$routes->delete('/user/unregister', '');
-//$routes->post('/user/wishlist', '');
-//$routes->delete('/user/un-wishlist', '');
-//
-//$routes->get('/roles', '');
-//$routes->put('/role/{id_role:integer}/user/{id_user:integer}', '');
+$routes->post('/user/register', 'UserController::registerToEvent');
+$routes->delete('/user/unregister', 'UserController::unregisterToEvent');
+$routes->post('/user/wishlist', 'UserController::wishlistEvent');
+$routes->delete('/user/un-wishlist', 'UserController::unwishlistEvent');
+
+$routes->get('/roles', 'RoleController::getAll');
+$routes->put('/role/{id:integer}', 'RoleController::getById');
+$routes->put('/role/{id:integer}/users', 'RoleController::getUsersByRole');

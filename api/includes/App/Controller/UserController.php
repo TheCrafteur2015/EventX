@@ -35,7 +35,42 @@ class UserController extends Controller {
 	}
 	
 	public function setProfilePicture(int $id): Response {
+//		$path = $this->uploadFile("profile_picture");
+//		$this->db->prepare("UPDATE profile SET profile_picture = ? WHERE id_user = ?");
+//		$this->db->execute("si", [$path, $id]);
+		return $this->json(["Sorry there's no database up here"]);
+	}
 	
+	public function registerToEvent(): Response {
+//		extract($this->request->getPostValues());
+//		$this->db->prepare("INSERT INTO registration VALUES (?, ?)");
+//		$this->db->execute("ii", [$id_user, $id_event]);
+//		return $this->successful("true");
+		return $this->json(["Sorry there's no database up here"]);
+	}
+	
+	public function unregisterToEvent(): Response {
+//		extract($this->request->getPostValues());
+//		$this->db->prepare("DELETE FROM registration WHERE id_user = ? AND id_event = ?");
+//		$this->db->execute("ii", [$id_user, $id_event]);
+//		return $this->successful("true");
+		return $this->json(["Sorry there's no database up here"]);
+	}
+	
+	public function wishlistEvent(): Response {
+//		extract($this->request->getPostValues());
+//		$this->db->prepare("INSERT INTO wishlist VALUES (?, ?)");
+//		$this->db->execute("ii", [$id_user, $id_event]);
+//		return $this->successful("true");
+		return $this->json(["Sorry there's no database up here"]);
+	}
+	
+	public function unwishlistEvent(): Response {
+//		extract($this->request->getPostValues());
+//		$this->db->prepare("DELETE FROM wishlist WHERE id_user = ? AND id_event = ?");
+//		$this->db->execute("ii", [$id_user, $id_event]);
+//		return $this->successful("true");
+		return $this->json(["Sorry there's no database up here"]);
 	}
 	
 }

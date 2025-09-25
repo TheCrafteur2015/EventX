@@ -135,14 +135,8 @@ class Boot {
 		if (!defined("DOCUMENT_ROOT"))
 			define("DOCUMENT_ROOT", $constants->constants['DOCUMENT_ROOT']);
 		
-		if (!defined("IMG_PATH"))
-			define("IMG_PATH", $constants->constants['IMG_PATH']);
-		
-		if (!defined("DOC_PATH"))
-			define("DOC_PATH", $constants->constants['DOC_PATH']);
-		
-		if (!defined("TMP_PATH"))
-			define("TMP_PATH", $constants->constants['TMP_PATH']);
+		if (!defined("IMAGEPATH"))
+			define("IMAGEPATH", $constants->constants['IMAGEPATH']);
 		
 		define("CONTENT_TYPE", "Content-Type");
 		define("CONTENT_LENGTH", "Content-Length");
