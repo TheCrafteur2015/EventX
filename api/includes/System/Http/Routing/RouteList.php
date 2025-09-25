@@ -3,6 +3,7 @@
 namespace System\Http\Routing;
 
 use Closure;
+use ReflectionException;
 use System\Http\MethodType;
 
 class RouteList {
@@ -68,6 +69,9 @@ class RouteList {
 		$this->addRoute("PATCH", $uri, $handler, $options);
 	}
 	
+	/**
+	 * @throws ReflectionException
+	 */
 	private function addRoute(string $method, string $uri, Closure|callable|string|null $handler, array $options = []): void {
 		$handlerType = $this->getHandlerType($handler);
 		$handler = $this->mapHandler($handler, $handlerType);

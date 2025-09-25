@@ -1,5 +1,5 @@
 <?php
 
 http_response_code(307);
-header("Location: /REST/api.php");
+header("Location: /api.php");
 exit;

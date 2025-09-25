@@ -46,7 +46,6 @@ class Configuration implements JsonSerializable {
 		
 		$this->request_path = $_SERVER['PATH_INFO'] ?? "/";
 		$this->request_method = $_SERVER['REQUEST_METHOD'];
-		require $_SERVER['DOCUMENT_ROOT']."/scripting/ServerUtilities.php";
 		$this->server_ip = isConnected() ? gethostbynamel(gethostname())[1] : "127.0.0.1";
 		$this->origin = $_SERVER['REQUEST_SCHEME']."://".$_SERVER['SERVER_NAME'];
 		$this->base_dir = $base_dir;
