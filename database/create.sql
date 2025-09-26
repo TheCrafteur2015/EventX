@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS role(
-   id_role INT,
+   id_role INT AUTO_INCREMENT,
    role_name VARCHAR(256) NOT NULL,
    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
    updated_at DATETIME NOT NULL ON UPDATE CURRENT_TIMESTAMP,
@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS role(
 );
 
 CREATE TABLE IF NOT EXISTS users(
-   id_user INT,
+   id_user INT AUTO_INCREMENT,
    mail VARCHAR(256) NOT NULL,
    password VARCHAR(256) NOT NULL,
    is_active BOOLEAN,
@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS users(
 );
 
 CREATE TABLE IF NOT EXISTS profile(
-   id_profile INT,
+   id_profile INT AUTO_INCREMENT,
    firstname VARCHAR(256) NOT NULL,
    lastname VARCHAR(256) NOT NULL,
    picture VARCHAR(512),
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS profile(
 );
 
 CREATE TABLE IF NOT EXISTS event(
-   id_event INT,
+   id_event INT AUTO_INCREMENT,
    event_name VARCHAR(256) NOT NULL,
    event_description TEXT,
    start_date DATETIME NOT NULL,
